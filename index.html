@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio en construction</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+        <style>
+            body {
+                margin: 0 10%;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                background-color: rgba(255, 254, 224);
+            }
+
+            @font-face {
+                font-family: porkys;
+                src: url("fonts/PORKYS_.TTF");
+            }
+
+            @font-face {
+                font-family: resolve;
+                src: url("fonts/Resolve-Light.otf");
+            }
+
+            .img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 100px;
+                height: 75%;
+                z-index: -1;
+                /* filter: blur(0.5px); */
+            }
+            .img img {
+                height: 100%;
+            }
+            .img .credit {
+                position: absolute;
+                font-family: resolve, Geneva, Verdana, sans-serif;
+                color: #3d0f0f;
+                font-size: 0.7em;
+                right: 0px;
+                font-style: italic;
+
+                a {
+                    color: #3d0f0f;
+                    text-decoration: none;
+                    font-weight: 800;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                max-width: 45%;
+            }
+
+            .gimme-time {
+                font-size: 2.5em;
+                font-family: porkys, sans-serif;
+                color: rgb(107, 47, 19);
+                text-align: start;
+            }
+
+            .dummy-text {
+                font-family: resolve, Geneva, Verdana, sans-serif;
+                color: #3d0f0f;
+                font-size: 1.2em;
+                margin-top: 20px;
+                font-weight: 400;
+                max-width: 100%;
+            }
+
+            .email-input-label {
+                font-family: resolve, Geneva, Verdana, sans-serif;
+                color: #3d0f0f;
+                font-size: 1.5em;
+                margin-top: 40px;
+                margin-bottom: 16px;
+                font-weight: 600;
+            }
+
+            /* #region MARK: Input Box */
+            .input-box {
+                width: 100%;
+                position: relative;
+            }
+
+            input {
+                display: block;
+                padding: 10px;
+                padding-left: 42px;
+                padding-right: 120px;
+                background: hsla(0, 0%, 75%, 0.473);
+                border: none;
+                border-radius: 10rem;
+                width: calc(100% - 42px - 120px);
+                font-size: 1em;
+            }
+
+            input::placeholder {
+                color: #005068;
+                font-size: 1em;
+            }
+
+            .email-icon {
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1em;
+                color: #ddd;
+                background-color: #333;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .notify-btn {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px 20px;
+                font-size: 0.8em;
+                border: none;
+                border-radius: 10rem;
+                background-color: #333;
+                color: #fff;
+                cursor: pointer;
+                height: 32px;
+            }
+            /* #endregion */
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1 class="gimme-time">
+                Laissez-moi encore un chocolat chaud
+                <br/>
+                et je me remet à coder.
+            </h1>
+            <p class="dummy-text">
+                Merci d'être arrivé jusqu'ici. Je suis Kerryghan, developpeur full-stack et data-scientist. Malheureusement tu arrives un peu tôt. Mais rassure toi, tu pourra bientôt retrouver mon portfolio ici même. J'y décrirait mes projets et mon parcours.
+                <br>
+                Ici on parlera machine learning, docker et développement web.
+            </p>
+            <label class="email-input-label" for="email">Je veux savoir quand tu as fini ton chocolat chaud...</label>
+            <div class="input-box">
+                <input type="text" id="email" name="email" placeholder="Email" />
+                <i class="email-icon iconoir-mail"></i>
+                <button type="submit" class="notify-btn">Me Notifier</button>
+            </div>
+        </div>
+        <div class="img">
+            <img src="images/pikura-pixel-art-7280889_1920.png" alt="Café mignon avec des chats" />
+            <p class="credit">Image par <a href="https://pixabay.com/fr/users/pikurā-17746921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pikurā</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pixabay</a></p>
+        </div>
+    </body>
+</html>

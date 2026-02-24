@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio en construction</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: rgba(255, 254, 224) url(images/pikura-pixel-art-7280889_1920.png) no-repeat center/auto 70% fixed;
+            }
+
+            .blurr {
+                width: 100%;
+                height: 100%;
+                padding: 0 15%;
+                backdrop-filter: blur(4px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1.5em;
+                    padding: 0 5%;
+                }
+            }
+
+            input {
+                display: block;
+                padding: 10px;
+                padding-left: 42px;
+                padding-right: 120px;
+                background: hsla(0, 0%, 75%, 0.473);
+                border: none;
+                border-radius: 10rem;
+                width: calc(100% - 42px - 120px);
+                font-size: 0.6em;
+            }
+
+            input::placeholder {
+                color: #005068;
+                font-size: 0.6em;
+            }
+
+            .input-box {
+                width: 80%;
+                position: relative;
+            }
+
+            .email-icon {
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.6em;;
+                color: #ddd;
+                background-color: #333;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .notify-btn {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px 10px;
+                font-size: 0.5em;
+                border: none;
+                border-radius: 10rem;
+                background-color: #333;
+                color: #fff;
+                cursor: pointer;
+                height: 32px;
+            }
+
+            @font-face {
+                font-family: porkys;
+                src: url(PORKYS_.TTF);
+            }
+
+            .gimme-time {
+                font-family: porkys, sans-serif;
+                text-align: end;
+            }
+
+            .credit {
+                font-size: 0.5em;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="blurr">
+            <p class="gimme-time">Laissez-moi encore un chocolat chaud et je me remet à coder.</p>
+            <p>Portfolio en construction</p>
+            <div class="input-box">
+                <input type="text" name="email" placeholder="Je veux savoir quand tu as fini ton chocolat chaud." />
+                <i class="email-icon iconoir-mail"></i>
+                <button type="submit" class="notify-btn">Me Notifier</button>
+            </div>
+            <p class="credit">Image par <a href="https://pixabay.com/fr/users/pikurā-17746921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pikurā</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pixabay</a></p>
+        </div>
+    </body>
+</html>
