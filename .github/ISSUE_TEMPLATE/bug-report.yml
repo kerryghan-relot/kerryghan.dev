@@ -4,7 +4,6 @@ title: "[Part_of_the_website] Bug: bug_summary"
 labels: bug
 projects: kerryghan-relot/1
 assignees: kerryghan-relot
-type: bug
 body:
   - type: markdown
     attributes:
