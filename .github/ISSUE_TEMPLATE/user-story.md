@@ -4,12 +4,12 @@ about: Suggest an idea for this project
 title: "[Part of the website implied] Name of the feature"
 labels: user  story
 assignees: kerryghan-relot
-
+projects: kerryghan-relot/1
 ---
 
 # Overview
 ## What is the feature about ?
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+A clear and concise description of what you want. Ex. I'm always frustrated when [...]
 
 ## Which part(s) of the website is(are) concerned ?
 - abc
@@ -17,10 +17,10 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 
 # Fonctionnal details
 ## What is the expected behavior ?
-lorem ipsum
+Ex. I think it should be something like...
 
 ## In case of error, how should they be handled ?
-lorem ipsum
+Ex. When [this or that] occurs, we should...
 
 ## Acceptance criteria
 - abc
