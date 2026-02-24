@@ -2,7 +2,7 @@ name: Bug Report
 description: File a bug report.
 title: "[Part_of_the_website] Bug: bug_summary"
 labels: bug
-projects: kerryghan-relot/1
+projects: kerryghan-relot/4
 assignees: kerryghan-relot
 body:
   - type: markdown
