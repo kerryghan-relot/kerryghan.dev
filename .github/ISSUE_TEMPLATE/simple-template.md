@@ -4,8 +4,7 @@ about: A quick issue needing few information
 title: "[Part of the website implied] Name of the feature"
 labels: ''
 assignees: kerryghan-relot
-project: kerryghan-relot/4
-
+projects: kerryghan-relot/5
 ---
 
 # Description:

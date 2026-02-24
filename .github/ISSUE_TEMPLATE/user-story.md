@@ -4,7 +4,7 @@ about: Suggest an idea for this project
 title: "[Part of the website implied] Name of the feature"
 labels: "user story"
 assignees: kerryghan-relot
-project: kerryghan-relot/5
+projects: kerryghan-relot/5
 ---
 
 # Overview
