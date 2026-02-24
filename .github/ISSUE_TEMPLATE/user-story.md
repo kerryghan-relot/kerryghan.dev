@@ -2,7 +2,7 @@
 name: User Story
 about: Suggest an idea for this project
 title: "[Part of the website implied] Name of the feature"
-labels: user  story
+labels: user story
 assignees: kerryghan-relot
 projects: kerryghan-relot/1
 ---
@@ -15,7 +15,7 @@ A clear and concise description of what you want. Ex. I'm always frustrated when
 - abc
 - def
 
-# Fonctionnal details
+# Functional details
 ## What is the expected behavior ?
 Ex. I think it should be something like...
 
