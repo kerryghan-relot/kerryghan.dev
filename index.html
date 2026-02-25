@@ -177,7 +177,7 @@
             <label class="email-input-label" for="email">Je veux savoir quand tu as fini ton chocolat chaud...</label>
             <form class="input-box" method="POST" id="form">
                 <!-- Hidden values for sending the form -->
-                <input type="hidden" name="access_key" value="2b759c67-d6dd-4db8-97b0-8df8c80a2883">
+                <input type="hidden" name="access_key">
                 <input type="hidden" name="subject" value="Un nouveau curieux veut être notifié !">
                 <input type="hidden" name="from_name" value="Chocolat chaud">
                 <input type="checkbox" name="botcheck" id="" style="display: none;">
@@ -194,7 +194,12 @@
         </div>
         <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="env.dev.js"></script>
+        <script src="env.js"></script>
         <script>
+            // Set the access key from the environment variable
+            form.querySelector('input[name="access_key"]').value = WEB3FORMS_KEY;
+
             const form = document.getElementById('form');
 
             window.onload = function() {
