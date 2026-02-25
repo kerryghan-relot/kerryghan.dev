@@ -197,10 +197,10 @@
         <script src="env.dev.js"></script>
         <script src="env.js"></script>
         <script>
+            const form = document.getElementById('form');
+
             // Set the access key from the environment variable
             form.querySelector('input[name="access_key"]').value = WEB3FORMS_KEY;
-
-            const form = document.getElementById('form');
 
             window.onload = function() {
                 // Reset the form fields when the page loads
