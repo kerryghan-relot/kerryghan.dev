@@ -195,18 +195,18 @@
         <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script>
+            const form = document.getElementById('form');
+
             window.onload = function() {
                 // Reset the form fields when the page loads
-                document.getElementById("form").reset();
+                form.reset();
             };
-
-            const form = document.getElementById('form');
 
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
+                const objectData = Object.fromEntries(formData);
+                const jsonData = JSON.stringify(objectData);
 
                 fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
@@ -214,10 +214,10 @@
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: json
+                    body: jsonData
                 })
                 .then(async (response) => {
-                    let json = await response.json();
+                    const jsonResponse = await response.json();
                     if (response.status == 200) {
                         toastr.success(
                             'Merci! J\'ai bien reçu ton email.', 
@@ -225,9 +225,9 @@
                             {'positionClass': 'toast-bottom-left'}
                         );
                     } else {
-                        console.error(response, json);
+                        console.error(response, jsonResponse);
                         toastr.error(
-                            json.message, 
+                            jsonResponse.message, 
                             'Oops', 
                             {'positionClass': 'toast-bottom-left'}
                         );
