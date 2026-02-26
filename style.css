@@ -1,0 +1,203 @@
+* {
+    --body-margin-x: 10%;
+    --body-margin-y: 0;
+    --img-container-height: 75%;
+    --img-container-width: auto;
+    --img-container-offset-right: 100px;
+    --image-blur: 0;
+    --image-opacity: 0.9;
+    --image-height: 100%;
+    --image-width: auto;
+    --content-max-width: 45%;
+    --header-line-break: block;
+    --text-alignement: start;
+}
+body {
+    margin: var(--body-margin-y) var(--body-margin-x);
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 254, 224);
+}
+
+@font-face {
+    font-family: porkys;
+    src: url("fonts/PORKYS_.TTF");
+}
+
+@font-face {
+    font-family: resolve;
+    src: url("fonts/Resolve-Light.otf");
+}
+
+.img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--img-container-offset-right);
+    height: var(--img-container-height);
+    width: var(--img-container-width);
+    z-index: -1;
+}
+.img img {
+    height: var(--image-height);
+    width: var(--image-width);
+    filter: blur(var(--image-blur)) opacity(var(--image-opacity));
+}
+.img .credit {
+    position: absolute;
+    font-family: resolve, Geneva, Verdana, sans-serif;
+    color: #3d0f0f;
+    font-size: 0.7em;
+    right: 0px;
+    font-style: italic;
+
+    a {
+        color: #3d0f0f;
+        text-decoration: none;
+        font-weight: 800;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: var(--content-max-width);
+}
+
+.gimme-time {
+    font-size: 2.0em;
+    font-family: porkys, sans-serif;
+    color: rgb(107, 47, 19);
+    text-align: var(--text-alignement);
+    margin-top: 0;
+
+    & br{
+        display: var(--header-line-break)
+    }
+}
+
+.dummy-text {
+    font-family: resolve, Geneva, Verdana, sans-serif;
+    color: #3d0f0f;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: 400;
+    text-align: var(--text-alignement);
+    /* max-width: 100%; */
+}
+
+.email-input-label {
+    font-family: resolve, Geneva, Verdana, sans-serif;
+    color: #3d0f0f;
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-align: var(--text-alignement);
+}
+
+/* #region MARK: Input Box */
+.input-box {
+    width: 100%;
+    position: relative;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    padding-left: 42px;
+    padding-right: 120px;
+    background: hsla(0, 0%, 75%, 0.473);
+    border: none;
+    border-radius: 10rem;
+    width: calc(100% - 42px - 120px);
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #005068;
+    font-size: 1em;
+}
+
+.email-icon {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #ddd;
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.notify-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 20px;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 10rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    height: 32px;
+}
+/* #endregion */
+
+/* #region MARK: toastr overwrite */
+#toast-container > div {
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    opacity: 0.7;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    filter: alpha(opacity=70);
+    transition: all 1s ease;
+}
+#toast-container > div:hover {
+    -moz-box-shadow: 0 0 12px #666666;
+    -webkit-box-shadow: 0 0 12px #666666;
+    box-shadow: 0 0 12px #666666;
+    opacity: 0.9;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    filter: alpha(opacity=90);
+    transition: all 0.4s ease;
+}
+/* #endregion */
+
+/* #region MARK: Responsive Design */
+
+/* Extra-mall devices */
+@media screen and (max-width: 768px) {
+    * {
+        --body-margin-x: 5%;
+        --body-margin-y: 0;
+        --img-container-height: auto;
+        --img-container-width: 100%;
+        --img-container-offset-right: 0;
+        --image-blur: 4px;
+        --image-opacity: 0.7;
+        --image-height: auto;
+        --image-width: 100%;
+        --content-max-width: 100%;
+        --header-line-break: none;
+        --text-alignement: center;
+    }
+}
+
+/* Medium devices */
+@media screen and (max-width: 1280px) {
+    /* maybe later */
+}
+
+/* #endregion */
