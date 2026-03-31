@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio en construction</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="content">
-            <h1 class="gimme-time">
-                Laisse-moi encore un chocolat chaud
-                <br/>
-                et je me remets à coder.
-            </h1>
-            <p class="dummy-text">
-                Merci d'être arrivé jusqu'ici. Je suis Kerryghan, développeur full-stack et data-scientist. Malheureusement tu arrives un peu tôt. Mais rassure-toi, tu pourras bientôt retrouver mon portfolio ici même. J'y décrirais mes projets et mon parcours.
-                <br>
-                Ici on parlera machine learning, docker et développement web.
-            </p>
-            <label class="email-input-label" for="email">Je veux savoir quand tu as fini ton chocolat chaud...</label>
-            <form class="input-box" method="POST" id="form">
-                <!-- Hidden values for sending the form -->
-                <input type="hidden" name="access_key">
-                <input type="hidden" name="subject" value="Un nouveau curieux veut être notifié !">
-                <input type="hidden" name="from_name" value="Chocolat chaud">
-                <input type="checkbox" name="botcheck" id="" style="display: none;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio en construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="gimme-time">
+            Laisse-moi encore un chocolat chaud
+            <br/>
+            et je me remets à coder.
+        </h1>
+        <p class="dummy-text">
+            Merci d'être arrivé jusqu'ici. Je suis Kerryghan, développeur full-stack et data-scientist. Malheureusement tu arrives un peu tôt. Mais rassure-toi, tu pourras bientôt retrouver mon portfolio ici même. J'y décrirais mes projets et mon parcours.
+            <br>
+            Ici on parlera machine learning, docker et développement web.
+        </p>
+        <label class="email-input-label" for="email">Je veux savoir quand tu as fini ton chocolat chaud...</label>
+        <form class="input-box" method="POST" id="form">
+            <!-- Hidden values for sending the form -->
+            <input type="hidden" name="access_key">
+            <input type="hidden" name="subject" value="Un nouveau curieux veut être notifié !">
+            <input type="hidden" name="from_name" value="Chocolat chaud">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-                <!-- Actual form fields -->
-                <input type="email" id="email" name="email" placeholder="Email" required/>
-                <i class="email-icon iconoir-mail"></i>
-                <button type="submit" class="notify-btn">Me Notifier</button>
-            </form>
+            <!-- Actual form fields -->
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+            <i class="email-icon iconoir-mail"></i>
+            <button type="submit" class="notify-btn">Me Notifier</button>
+        </form>
+        <div class="media-icons-container">
+            <a class="media-icon" href="#"><i class="fa-brands fa-github"></i></a>
+            <a class="media-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <!-- will soon add 'leetcode' too -->
         </div>
-        <div class="img">
-            <img src="images/pikura-pixel-art-7280889_1920.png" alt="Café mignon avec des chats" />
-            <p class="credit">Image par <a href="https://pixabay.com/fr/users/pikurā-17746921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pikurā</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pixabay</a></p>
-        </div>
-        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <script src="env.dev.js"></script>
-        <script src="env.js"></script>
-        <script>
-            const form = document.getElementById('form');
+    </div>
+    <div class="img">
+        <img src="images/pikura-pixel-art-7280889_1920.png" alt="Café mignon avec des chats" />
+        <p class="credit">Image par <a href="https://pixabay.com/fr/users/pikurā-17746921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pikurā</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7280889">Pixabay</a></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="env.dev.js"></script>
+    <script src="env.js"></script>
+    <script>
+        const form = document.getElementById('form');
 
-            // Set the access key from the environment variable
-            form.querySelector('input[name="access_key"]').value = WEB3FORMS_KEY;
+        // Set the access key from the environment variable
+        form.querySelector('input[name="access_key"]').value = WEB3FORMS_KEY;
 
-            window.onload = function() {
-                // Reset the form fields when the page loads
-                form.reset();
-            };
+        window.onload = function() {
+            // Reset the form fields when the page loads
+            form.reset();
+        };
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const objectData = Object.fromEntries(formData);
-                const jsonData = JSON.stringify(objectData);
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const objectData = Object.fromEntries(formData);
+            const jsonData = JSON.stringify(objectData);
 
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: jsonData
-                })
-                .then(async (response) => {
-                    const jsonResponse = await response.json();
-                    if (response.status == 200) {
-                        toastr.success(
-                            'Merci! J\'ai bien reçu ton email.', 
-                            '', 
-                            {'positionClass': 'toast-bottom-left'}
-                        );
-                    } else {
-                        console.error(response, jsonResponse);
-                        toastr.error(
-                            jsonResponse.message, 
-                            'Oops', 
-                            {'positionClass': 'toast-bottom-left'}
-                        );
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: jsonData
+            })
+            .then(async (response) => {
+                const jsonResponse = await response.json();
+                if (response.status == 200) {
+                    toastr.success(
+                        'Merci! J\'ai bien reçu ton email.', 
+                        '', 
+                        {'positionClass': 'toast-bottom-left'}
+                    );
+                } else {
+                    console.error(response, jsonResponse);
                     toastr.error(
-                        error.message, 
+                        jsonResponse.message, 
                         'Oops', 
                         {'positionClass': 'toast-bottom-left'}
                     );
-                })
-                .then(function() {
-                    form.reset();
-                });
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                toastr.error(
+                    error.message, 
+                    'Oops', 
+                    {'positionClass': 'toast-bottom-left'}
+                );
+            })
+            .then(function() {
+                form.reset();
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
